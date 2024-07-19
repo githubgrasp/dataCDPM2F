@@ -1,0 +1,114 @@
+# t3d -d 0.02 -X -p 8 -i mesh.in -o mesh.out
+# bottom vertices
+vertex 1 xyz 0.0 0.0 0.0
+vertex 2 xyz 0.01 0.0 0.0
+vertex 3 xyz 0.01 0.0762 0.0
+vertex 4 xyz 0.0 0.0762 0.0
+
+# top vertices
+vertex 5 xyz 0.0 0.0 0.205
+vertex 6 xyz 0.01 0.0 0.205
+vertex 7 xyz 0.01 0.0762 0.205
+vertex 8 xyz 0.0 0.0762 0.205
+
+# under bottom vertices
+vertex 9 xyz 0.0 0.0 -0.05
+vertex 10 xyz 0.01 0.0 -0.05
+vertex 11 xyz 0.01 0.0762 -0.05
+vertex 12 xyz 0.0 0.0762 -0.05
+
+# above top vertices
+vertex 13 xyz 0.0 0.0 0.255
+vertex 14 xyz 0.01 0.0 0.255
+vertex 15 xyz 0.01 0.0762 0.255
+vertex 16 xyz 0.0 0.0762 0.255
+
+
+#bottom curves
+curve 1 order 2 vertex 1 2
+curve 2 order 2 vertex 2 3
+curve 3 order 2 vertex 3 4
+curve 4 order 2 vertex 4 1
+
+#top curves
+curve 5 order 2 vertex 5 6
+curve 6 order 2 vertex 6 7
+curve 7 order 2 vertex 7 8
+curve 8 order 2 vertex 8 5
+
+#vertical curves
+curve 9 order 2 vertex 1 5
+curve 10 order 2 vertex 2 6
+curve 11 order 2 vertex 3 7
+curve 12 order 2 vertex 4 8
+
+#under bottom curves
+curve 13 order 2 vertex 9 10
+curve 14 order 2 vertex 10 11
+curve 15 order 2 vertex 11 12
+curve 16 order 2 vertex 12 9
+
+#above top curves
+curve 17 order 2 vertex 13 14
+curve 18 order 2 vertex 14 15
+curve 19 order 2 vertex 15 16
+curve 20 order 2 vertex 16 13
+
+#top vertical curves
+curve 21 order 2 vertex 5 13
+curve 22 order 2 vertex 6 14
+curve 23 order 2 vertex 7 15
+curve 24 order 2 vertex 8 16
+
+#bottom vertical curves
+curve 25 order 2 vertex 9 1
+curve 26 order 2 vertex 10 2
+curve 27 order 2 vertex 11 3
+curve 28 order 2 vertex 12 4
+
+
+#facets
+#bottom
+patch 1 normal 0 0 1 boundary curve 1 2 3 4 
+#top
+patch 2 normal 0 0 1 boundary curve 5 6 7 8 
+#front
+patch 3 normal 0 -1 0 boundary curve 1 10 -5 -9
+#back
+patch 4 normal 0 -1 0 boundary curve -3 11 7 -12
+#left
+patch 5 normal 1 0 0 boundary curve -4 12 8 -9
+#right
+patch 6 normal 1 0 0 boundary curve 2 11 -6 -10
+#bottom bottom
+patch 7 normal 0 0 1 boundary curve 13 14 15 16
+#top top
+patch 8 normal 0 0 1 boundary curve 17 18 19 20
+#top front
+patch 9 normal 0 -1 0 boundary curve 5 22 -17 -21 
+#top back
+patch 10 normal 0 -1 0 boundary curve -7 23 19 -24 
+#top left
+patch 11 normal 1 0 0 boundary curve -8 24 20 -21
+#top right
+patch 12 normal 1 0 0 boundary curve 6 23 -18 -22
+#bottom front
+patch 13 normal 0 -1 0 boundary curve 13 26 -1 -25 
+#bottom back
+patch 14 normal 0 -1 0 boundary curve -15 27 3 -28 
+#bottom right
+patch 15 normal 1 0 0 boundary curve -16 28 4 -25 
+#bottom left
+patch 16 normal 1 0 0 boundary curve 14 27 -2 -26
+
+
+#region 1
+region 1 boundary patch -1 2 3 -4 -5 6 size def 
+region 2 boundary patch -2 8 9 -10 -11 12 size def 
+region 3 boundary patch -7 1 13 -14 -15 16 size def
+
+
+
+
+
+

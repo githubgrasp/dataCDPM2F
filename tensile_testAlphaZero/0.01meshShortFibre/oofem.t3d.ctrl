@@ -1,0 +1,61 @@
+oofem.out
+Plain Concrete Column
+StaticStructural nmsteps 1 nsteps 1 contextOutput 1000 nmodules 1 profileopt 1 lstype 4 smtype 8 stiffmode 2
+nsteps 500 rtolv 1.e-3 maxiter 1000  controlmode 1 stiffmode 2 initialguess 1 lstype 4 smtype 8
+vtkxml primvars 1 1 cellvars 5 1 2 4 5 12 tstep_step 1 domain_all
+domain 3d
+OutputManager tstep_all dofman_output { 1 5 10 }
+ncrosssect 2 nmat 2 nbc 2 nic 0 nltf 2
+SimpleCS 1
+SimpleCS 2 
+cdpm2f2 1 d 0. talpha 0. stype 2 E 15.9e9 n 0.2 ft 1.12e6 fc 15.5e6 wf 2.22e-7 ef 60.e9 lf 12.0e-3 vf0 0.02 df 40.e-6 beta 0.015 f 0.5 tau0 0.9e6 sm 0.004 hp 0.7 ctype 0 drelation 2 fdtype 1 alpha 0.6
+isole 2 d 0 n 0.2 e 20.e9 talpha 0.
+BoundaryCondition  1 loadTimeFunction 1 prescribedvalue 0.0 
+#BoundaryCondition  2 loadTimeFunction 2 valType 2 prescribedvalue -0.03
+BoundaryCondition  2 loadTimeFunction 2 prescribedvalue 0.01
+#BoundaryCondition  4 loadTimeFunction 2 valType 2 prescribedvalue -0.06
+#BoundaryCondition  5 loadTimeFunction 2 valType 2 prescribedvalue 0.03
+#NodalLoad 2 loadTimeFunction 1 dofs 3 1 2 3 Components 3 0. 0. 1.
+ConstantFunction 1 f(t) 1.0  
+PiecewiseLinFunction 2 t 2 0. 500. f(t) 2 0.0 1.0
+
+region 1 
+elemprop crossSect 1 mat 1 
+tetratype ltrspace
+
+region 2 3
+elemprop crossSect 2 mat 2 
+tetratype ltrspace
+
+vertex 14
+nodeprop bc 3 0 0 2
+
+curve 17 18 19 20
+vertex 13 15 16
+patch 8
+nodetype node
+nodeprop mastermask 3 0 0 14 doftype 3 0 0 1
+
+vertex 10
+nodeprop bc 3 0 0 1
+
+curve 13 14 15 16
+vertex 9 11 12
+patch 7
+nodetype node
+nodeprop mastermask 3 0 0 10 doftype 3 0 0 1
+
+
+###### Used for Extractor
+###
+#%BEGIN_CHECK%
+#DOFMAN  number 5 dof 3 type d
+#DOFMAN  number 1 dof 3 type d
+#REACTION number 10 dof 3
+#%END_CHECK%
+
+#Explicit dynamic loading
+#NlDEIDynamic nsteps 1000000 contextOutputStep 1000000 dumpcoef 0. deltat 0.0000001 profileopt 1
+#Incremental-iterative static analysis 
+#NonLinearStatic nmsteps 1 nsteps 1 profileopt 1  nmodules 1 contextOutputStep 1000
+#nsteps 200 rtolf 1.e-3 stiffMode 0 maxiter 1000 controllmode 1 donotfixload manrmsteps 1§.

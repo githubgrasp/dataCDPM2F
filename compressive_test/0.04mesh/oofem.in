@@ -1,0 +1,628 @@
+oofem.out
+Plain Concrete Column
+NonLinearStatic nmsteps 1  nmodules 1 nsteps 1 profileopt 1 contextOutputStep 1000
+nsteps 200 rtolf 1.e-3 stiffMode 0 maxiter 1000 controllmode 1 donotfixload manrmsteps 1
+vtkxml primvars 1 1 cellvars 6 1 2 4 5 12 46 tstep_step 1 domain_all  
+domain 3d
+OutputManager tstep_all dofman_output { 1 3 9 46}
+ndofman 175 nelem 431 ncrosssect 2 nmat 2 nbc 2 nic 0 nltf 2
+node 1 coords 3 5.000000e-02 0.000000e+00 0.000000e+00
+node 2 coords 3 5.000000e-02 1.000000e-01 0.000000e+00
+node 3 coords 3 5.000000e-02 0.000000e+00 2.000000e-01
+node 4 coords 3 5.000000e-02 1.000000e-01 2.000000e-01
+node 5 coords 3 -2.500000e-02 -2.500000e-02 0.000000e+00
+node 6 coords 3 1.250000e-01 -2.500000e-02 0.000000e+00
+node 7 coords 3 1.250000e-01 1.250000e-01 0.000000e+00
+node 8 coords 3 -2.500000e-02 1.250000e-01 0.000000e+00
+node 9 coords 3 -2.500000e-02 -2.500000e-02 -3.000000e-02 bc 3 1 1 1
+node 10 coords 3 1.250000e-01 -2.500000e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 11 coords 3 1.250000e-01 1.250000e-01 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 12 coords 3 -2.500000e-02 1.250000e-01 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 13 coords 3 -2.500000e-02 -2.500000e-02 2.300000e-01 bc 3 1 1 2
+node 14 coords 3 1.250000e-01 -2.500000e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 15 coords 3 1.250000e-01 1.250000e-01 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 16 coords 3 -2.500000e-02 1.250000e-01 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 17 coords 3 -2.500000e-02 -2.500000e-02 2.000000e-01
+node 18 coords 3 1.250000e-01 -2.500000e-02 2.000000e-01
+node 19 coords 3 1.250000e-01 1.250000e-01 2.000000e-01
+node 20 coords 3 -2.500000e-02 1.250000e-01 2.000000e-01
+node 21 coords 3 8.528839e-02 1.457784e-02 0.000000e+00
+node 22 coords 3 9.999999e-02 4.999999e-02 0.000000e+00
+node 23 coords 3 8.528838e-02 8.542215e-02 0.000000e+00
+node 24 coords 3 1.471161e-02 1.457784e-02 0.000000e+00
+node 25 coords 3 1.375000e-08 4.999999e-02 0.000000e+00
+node 26 coords 3 1.471162e-02 8.542215e-02 0.000000e+00
+node 27 coords 3 8.528839e-02 1.457784e-02 2.000000e-01
+node 28 coords 3 9.999999e-02 4.999999e-02 2.000000e-01
+node 29 coords 3 8.528838e-02 8.542215e-02 2.000000e-01
+node 30 coords 3 1.471161e-02 1.457784e-02 2.000000e-01
+node 31 coords 3 1.375000e-08 4.999999e-02 2.000000e-01
+node 32 coords 3 1.471162e-02 8.542215e-02 2.000000e-01
+node 33 coords 3 5.000000e-02 0.000000e+00 4.000000e-02
+node 34 coords 3 5.000000e-02 0.000000e+00 8.000000e-02
+node 35 coords 3 5.000000e-02 0.000000e+00 1.200000e-01
+node 36 coords 3 5.000000e-02 0.000000e+00 1.600000e-01
+node 37 coords 3 5.000000e-02 1.000000e-01 4.000000e-02
+node 38 coords 3 5.000000e-02 1.000000e-01 8.000000e-02
+node 39 coords 3 5.000000e-02 1.000000e-01 1.200000e-01
+node 40 coords 3 5.000000e-02 1.000000e-01 1.600000e-01
+node 41 coords 3 2.176861e-03 -2.500000e-02 0.000000e+00
+node 42 coords 3 3.302127e-02 -2.500000e-02 0.000000e+00
+node 43 coords 3 6.697873e-02 -2.500000e-02 0.000000e+00
+node 44 coords 3 9.782314e-02 -2.500000e-02 0.000000e+00
+node 45 coords 3 1.250000e-01 2.176861e-03 0.000000e+00
+node 46 coords 3 1.250000e-01 3.302127e-02 0.000000e+00
+node 47 coords 3 1.250000e-01 6.697873e-02 0.000000e+00
+node 48 coords 3 1.250000e-01 9.782314e-02 0.000000e+00
+node 49 coords 3 9.782314e-02 1.250000e-01 0.000000e+00
+node 50 coords 3 6.697873e-02 1.250000e-01 0.000000e+00
+node 51 coords 3 3.302127e-02 1.250000e-01 0.000000e+00
+node 52 coords 3 2.176861e-03 1.250000e-01 0.000000e+00
+node 53 coords 3 -2.500000e-02 9.782314e-02 0.000000e+00
+node 54 coords 3 -2.500000e-02 6.697873e-02 0.000000e+00
+node 55 coords 3 -2.500000e-02 3.302127e-02 0.000000e+00
+node 56 coords 3 -2.500000e-02 2.176861e-03 0.000000e+00
+node 57 coords 3 2.176861e-03 -2.500000e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 58 coords 3 3.302127e-02 -2.500000e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 59 coords 3 6.697873e-02 -2.500000e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 60 coords 3 9.782314e-02 -2.500000e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 61 coords 3 1.250000e-01 2.176861e-03 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 62 coords 3 1.250000e-01 3.302127e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 63 coords 3 1.250000e-01 6.697873e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 64 coords 3 1.250000e-01 9.782314e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 65 coords 3 9.782314e-02 1.250000e-01 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 66 coords 3 6.697873e-02 1.250000e-01 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 67 coords 3 3.302127e-02 1.250000e-01 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 68 coords 3 2.176861e-03 1.250000e-01 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 69 coords 3 -2.500000e-02 9.782314e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 70 coords 3 -2.500000e-02 6.697873e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 71 coords 3 -2.500000e-02 3.302127e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 72 coords 3 -2.500000e-02 2.176861e-03 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 73 coords 3 2.176861e-03 -2.500000e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 74 coords 3 3.302127e-02 -2.500000e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 75 coords 3 6.697873e-02 -2.500000e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 76 coords 3 9.782314e-02 -2.500000e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 77 coords 3 1.250000e-01 2.176861e-03 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 78 coords 3 1.250000e-01 3.302127e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 79 coords 3 1.250000e-01 6.697873e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 80 coords 3 1.250000e-01 9.782314e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 81 coords 3 9.782314e-02 1.250000e-01 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 82 coords 3 6.697873e-02 1.250000e-01 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 83 coords 3 3.302127e-02 1.250000e-01 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 84 coords 3 2.176861e-03 1.250000e-01 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 85 coords 3 -2.500000e-02 9.782314e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 86 coords 3 -2.500000e-02 6.697873e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 87 coords 3 -2.500000e-02 3.302127e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 88 coords 3 -2.500000e-02 2.176861e-03 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 89 coords 3 2.176861e-03 -2.500000e-02 2.000000e-01
+node 90 coords 3 3.302127e-02 -2.500000e-02 2.000000e-01
+node 91 coords 3 6.697873e-02 -2.500000e-02 2.000000e-01
+node 92 coords 3 9.782314e-02 -2.500000e-02 2.000000e-01
+node 93 coords 3 1.250000e-01 2.176861e-03 2.000000e-01
+node 94 coords 3 1.250000e-01 3.302127e-02 2.000000e-01
+node 95 coords 3 1.250000e-01 6.697873e-02 2.000000e-01
+node 96 coords 3 1.250000e-01 9.782314e-02 2.000000e-01
+node 97 coords 3 9.782314e-02 1.250000e-01 2.000000e-01
+node 98 coords 3 6.697873e-02 1.250000e-01 2.000000e-01
+node 99 coords 3 3.302127e-02 1.250000e-01 2.000000e-01
+node 100 coords 3 2.176861e-03 1.250000e-01 2.000000e-01
+node 101 coords 3 -2.500000e-02 9.782314e-02 2.000000e-01
+node 102 coords 3 -2.500000e-02 6.697873e-02 2.000000e-01
+node 103 coords 3 -2.500000e-02 3.302127e-02 2.000000e-01
+node 104 coords 3 -2.500000e-02 2.176861e-03 2.000000e-01
+node 105 coords 3 7.420579e-02 9.375019e-02 2.840569e-02
+node 106 coords 3 7.671638e-02 9.226386e-02 6.159390e-02
+node 107 coords 3 7.787518e-02 9.150871e-02 1.004069e-01
+node 108 coords 3 7.749769e-02 9.175974e-02 1.399450e-01
+node 109 coords 3 7.376774e-02 9.398970e-02 1.731095e-01
+node 110 coords 3 9.476893e-02 7.226524e-02 1.655230e-01
+node 111 coords 3 9.643987e-02 3.147063e-02 1.593533e-01
+node 112 coords 3 7.421983e-02 6.257574e-03 1.715465e-01
+node 113 coords 3 7.673562e-02 7.748295e-03 1.383111e-01
+node 114 coords 3 7.789478e-02 8.504440e-03 9.948057e-02
+node 115 coords 3 7.751350e-02 8.250660e-03 5.997182e-02
+node 116 coords 3 7.377423e-02 6.013796e-03 2.684920e-02
+node 117 coords 3 9.477544e-02 2.774781e-02 3.439276e-02
+node 118 coords 3 9.644160e-02 6.852502e-02 4.052469e-02
+node 119 coords 3 9.445037e-02 7.289460e-02 8.041831e-02
+node 120 coords 3 9.837310e-02 6.265074e-02 1.206136e-01
+node 121 coords 3 9.447585e-02 2.715490e-02 1.193976e-01
+node 122 coords 3 9.838764e-02 3.740496e-02 7.920819e-02
+node 123 coords 3 2.579421e-02 9.375019e-02 2.840569e-02
+node 124 coords 3 2.328362e-02 9.226386e-02 6.159390e-02
+node 125 coords 3 2.212482e-02 9.150871e-02 1.004069e-01
+node 126 coords 3 2.250231e-02 9.175974e-02 1.399450e-01
+node 127 coords 3 2.623226e-02 9.398970e-02 1.731095e-01
+node 128 coords 3 5.231068e-03 7.226524e-02 1.655230e-01
+node 129 coords 3 3.560126e-03 3.147063e-02 1.593533e-01
+node 130 coords 3 2.578017e-02 6.257574e-03 1.715465e-01
+node 131 coords 3 2.326438e-02 7.748295e-03 1.383111e-01
+node 132 coords 3 2.210522e-02 8.504440e-03 9.948057e-02
+node 133 coords 3 2.248650e-02 8.250660e-03 5.997182e-02
+node 134 coords 3 2.622577e-02 6.013796e-03 2.684920e-02
+node 135 coords 3 5.224563e-03 2.774781e-02 3.439276e-02
+node 136 coords 3 3.558404e-03 6.852502e-02 4.052469e-02
+node 137 coords 3 5.549630e-03 7.289460e-02 8.041831e-02
+node 138 coords 3 1.626898e-03 6.265074e-02 1.206136e-01
+node 139 coords 3 5.524153e-03 2.715490e-02 1.193976e-01
+node 140 coords 3 1.612356e-03 3.740496e-02 7.920819e-02
+node 141 coords 3 5.000000e-02 4.999999e-02 0.000000e+00
+node 142 coords 3 5.000000e-02 4.999999e-02 2.000000e-01
+node 143 coords 3 1.146116e-02 1.145394e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 144 coords 3 4.797761e-02 3.514315e-03 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 145 coords 3 8.489597e-02 1.262874e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 146 coords 3 8.796611e-02 5.620442e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 147 coords 3 9.316233e-02 9.315644e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 148 coords 3 5.621337e-02 8.795349e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 149 coords 3 1.263779e-02 8.488690e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 150 coords 3 3.526630e-03 4.796394e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 151 coords 3 4.352578e-02 4.350119e-02 -3.000000e-02 mastermask 3 9 9 9 doftype 3 1 1 1
+node 152 coords 3 1.146116e-02 1.145394e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 153 coords 3 4.797761e-02 3.514315e-03 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 154 coords 3 8.489597e-02 1.262874e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 155 coords 3 8.796611e-02 5.620442e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 156 coords 3 9.316233e-02 9.315644e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 157 coords 3 5.621337e-02 8.795349e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 158 coords 3 1.263779e-02 8.488690e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 159 coords 3 3.526630e-03 4.796394e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 160 coords 3 4.352578e-02 4.350119e-02 2.300000e-01 mastermask 3 13 13 13 doftype 3 1 1 1
+node 161 coords 3 4.907278e-02 6.937936e-02 2.437901e-02
+node 162 coords 3 4.358033e-02 7.158917e-02 6.026023e-02
+node 163 coords 3 4.434378e-02 6.887696e-02 9.977387e-02
+node 164 coords 3 5.104323e-02 6.880319e-02 1.456528e-01
+node 165 coords 3 5.006511e-02 7.536234e-02 1.793643e-01
+node 166 coords 3 6.787999e-02 4.274962e-02 1.790496e-01
+node 167 coords 3 4.625924e-02 2.711377e-02 1.462574e-01
+node 168 coords 3 4.431077e-02 3.160755e-02 1.001693e-01
+node 169 coords 3 5.034401e-02 3.314256e-02 5.315850e-02
+node 170 coords 3 5.003265e-02 2.585020e-02 2.024013e-02
+node 171 coords 3 7.373657e-02 4.817574e-02 1.893053e-02
+node 172 coords 3 6.975953e-02 6.383983e-02 8.288373e-02
+node 173 coords 3 6.998884e-02 3.634933e-02 1.175310e-01
+node 174 coords 3 3.151950e-02 4.277320e-02 1.790414e-01
+node 175 coords 3 2.606475e-02 4.817291e-02 1.899322e-02
+ltrspace 1 nodes 4 41 5 56 72 crossSect 2 mat 2
+ltrspace 2 nodes 4 42 41 24 143 crossSect 2 mat 2
+ltrspace 3 nodes 4 144 43 42 59 crossSect 2 mat 2
+ltrspace 4 nodes 4 60 21 43 44 crossSect 2 mat 2
+ltrspace 5 nodes 4 6 44 45 10 crossSect 2 mat 2
+ltrspace 6 nodes 4 46 45 21 61 crossSect 2 mat 2
+ltrspace 7 nodes 4 47 46 22 63 crossSect 2 mat 2
+ltrspace 8 nodes 4 48 47 23 147 crossSect 2 mat 2
+ltrspace 9 nodes 4 7 48 49 65 crossSect 2 mat 2
+ltrspace 10 nodes 4 50 49 23 147 crossSect 2 mat 2
+ltrspace 11 nodes 4 51 50 2 67 crossSect 2 mat 2
+ltrspace 12 nodes 4 52 51 26 68 crossSect 2 mat 2
+ltrspace 13 nodes 4 8 52 53 68 crossSect 2 mat 2
+ltrspace 14 nodes 4 54 53 26 149 crossSect 2 mat 2
+ltrspace 15 nodes 4 150 55 54 71 crossSect 2 mat 2
+ltrspace 16 nodes 4 56 55 24 143 crossSect 2 mat 2
+ltrspace 17 nodes 4 24 1 42 144 crossSect 2 mat 2
+ltrspace 18 nodes 4 150 24 25 55 crossSect 2 mat 2
+ltrspace 19 nodes 4 150 26 54 25 crossSect 2 mat 2
+ltrspace 20 nodes 4 2 26 51 67 crossSect 2 mat 2
+ltrspace 21 nodes 4 23 2 50 148 crossSect 2 mat 2
+ltrspace 22 nodes 4 147 22 146 63 crossSect 2 mat 2
+ltrspace 23 nodes 4 21 22 46 62 crossSect 2 mat 2
+ltrspace 24 nodes 4 144 21 43 145 crossSect 2 mat 2
+ltrspace 25 nodes 4 41 56 24 143 crossSect 2 mat 2
+ltrspace 26 nodes 4 21 44 60 45 crossSect 2 mat 2
+ltrspace 27 nodes 4 48 23 49 147 crossSect 2 mat 2
+ltrspace 28 nodes 4 68 26 53 149 crossSect 2 mat 2
+ltrspace 29 nodes 4 9 57 72 41 crossSect 2 mat 2
+ltrspace 30 nodes 4 57 58 143 41 crossSect 2 mat 2
+ltrspace 31 nodes 4 42 144 59 58 crossSect 2 mat 2
+ltrspace 32 nodes 4 59 60 145 43 crossSect 2 mat 2
+ltrspace 33 nodes 4 60 10 61 45 crossSect 2 mat 2
+ltrspace 34 nodes 4 61 62 145 21 crossSect 2 mat 2
+ltrspace 35 nodes 4 62 63 146 22 crossSect 2 mat 2
+ltrspace 36 nodes 4 63 64 147 47 crossSect 2 mat 2
+ltrspace 37 nodes 4 64 11 65 48 crossSect 2 mat 2
+ltrspace 38 nodes 4 65 66 147 50 crossSect 2 mat 2
+ltrspace 39 nodes 4 50 148 67 66 crossSect 2 mat 2
+ltrspace 40 nodes 4 67 68 149 26 crossSect 2 mat 2
+ltrspace 41 nodes 4 68 12 69 8 crossSect 2 mat 2
+ltrspace 42 nodes 4 69 70 149 54 crossSect 2 mat 2
+ltrspace 43 nodes 4 54 150 71 70 crossSect 2 mat 2
+ltrspace 44 nodes 4 71 72 143 55 crossSect 2 mat 2
+ltrspace 45 nodes 4 72 57 143 41 crossSect 2 mat 2
+ltrspace 46 nodes 4 143 58 144 42 crossSect 2 mat 2
+ltrspace 47 nodes 4 144 43 59 145 crossSect 2 mat 2
+ltrspace 48 nodes 4 21 61 45 60 crossSect 2 mat 2
+ltrspace 49 nodes 4 21 62 146 22 crossSect 2 mat 2
+ltrspace 50 nodes 4 147 22 148 146 crossSect 2 mat 2
+ltrspace 51 nodes 4 147 64 65 48 crossSect 2 mat 2
+ltrspace 52 nodes 4 50 147 148 66 crossSect 2 mat 2
+ltrspace 53 nodes 4 26 67 148 149 crossSect 2 mat 2
+ltrspace 54 nodes 4 149 68 69 53 crossSect 2 mat 2
+ltrspace 55 nodes 4 150 55 71 143 crossSect 2 mat 2
+ltrspace 56 nodes 4 143 144 151 24 crossSect 2 mat 2
+ltrspace 57 nodes 4 21 151 146 145 crossSect 2 mat 2
+ltrspace 58 nodes 4 22 147 148 23 crossSect 2 mat 2
+ltrspace 59 nodes 4 141 150 149 151 crossSect 2 mat 2
+ltrspace 60 nodes 4 24 150 143 55 crossSect 2 mat 2
+ltrspace 61 nodes 4 144 145 151 21 crossSect 2 mat 2
+ltrspace 62 nodes 4 146 148 151 141 crossSect 2 mat 2
+ltrspace 63 nodes 4 148 149 151 141 crossSect 2 mat 2
+ltrspace 64 nodes 4 5 41 9 72 crossSect 2 mat 2
+ltrspace 65 nodes 4 41 42 58 143 crossSect 2 mat 2
+ltrspace 66 nodes 4 21 60 43 145 crossSect 2 mat 2
+ltrspace 67 nodes 4 10 60 44 45 crossSect 2 mat 2
+ltrspace 68 nodes 4 43 144 42 1 crossSect 2 mat 2
+ltrspace 69 nodes 4 65 11 7 48 crossSect 2 mat 2
+ltrspace 70 nodes 4 148 50 67 2 crossSect 2 mat 2
+ltrspace 71 nodes 4 68 67 51 26 crossSect 2 mat 2
+ltrspace 72 nodes 4 49 50 65 147 crossSect 2 mat 2
+ltrspace 73 nodes 4 55 150 54 25 crossSect 2 mat 2
+ltrspace 74 nodes 4 55 56 72 143 crossSect 2 mat 2
+ltrspace 75 nodes 4 53 54 69 149 crossSect 2 mat 2
+ltrspace 76 nodes 4 8 53 69 68 crossSect 2 mat 2
+ltrspace 77 nodes 4 47 48 64 147 crossSect 2 mat 2
+ltrspace 78 nodes 4 63 62 46 22 crossSect 2 mat 2
+ltrspace 79 nodes 4 62 61 46 21 crossSect 2 mat 2
+ltrspace 80 nodes 4 1 24 141 151 crossSect 2 mat 2
+ltrspace 81 nodes 4 150 141 24 151 crossSect 2 mat 2
+ltrspace 82 nodes 4 25 26 141 150 crossSect 2 mat 2
+ltrspace 83 nodes 4 26 2 141 148 crossSect 2 mat 2
+ltrspace 84 nodes 4 2 23 141 148 crossSect 2 mat 2
+ltrspace 85 nodes 4 22 148 141 23 crossSect 2 mat 2
+ltrspace 86 nodes 4 22 21 141 146 crossSect 2 mat 2
+ltrspace 87 nodes 4 151 21 1 144 crossSect 2 mat 2
+ltrspace 88 nodes 4 41 72 56 143 crossSect 2 mat 2
+ltrspace 89 nodes 4 42 143 24 144 crossSect 2 mat 2
+ltrspace 90 nodes 4 61 21 145 60 crossSect 2 mat 2
+ltrspace 91 nodes 4 47 147 63 22 crossSect 2 mat 2
+ltrspace 92 nodes 4 49 65 48 147 crossSect 2 mat 2
+ltrspace 93 nodes 4 26 68 53 52 crossSect 2 mat 2
+ltrspace 94 nodes 4 1 144 24 151 crossSect 2 mat 2
+ltrspace 95 nodes 4 150 24 143 151 crossSect 2 mat 2
+ltrspace 96 nodes 4 150 70 54 149 crossSect 2 mat 2
+ltrspace 97 nodes 4 26 150 54 149 crossSect 2 mat 2
+ltrspace 98 nodes 4 147 50 148 23 crossSect 2 mat 2
+ltrspace 99 nodes 4 147 47 23 22 crossSect 2 mat 2
+ltrspace 100 nodes 4 21 144 43 1 crossSect 2 mat 2
+ltrspace 101 nodes 4 62 21 146 145 crossSect 2 mat 2
+ltrspace 102 nodes 4 67 26 148 2 crossSect 2 mat 2
+ltrspace 103 nodes 4 151 21 146 141 crossSect 2 mat 2
+ltrspace 104 nodes 4 22 141 148 146 crossSect 2 mat 2
+ltrspace 105 nodes 4 150 141 149 26 crossSect 2 mat 2
+ltrspace 106 nodes 4 149 141 148 26 crossSect 2 mat 2
+ltrspace 107 nodes 4 21 151 1 141 crossSect 2 mat 2
+ltrspace 108 nodes 4 141 150 24 25 crossSect 2 mat 2
+ltrspace 109 nodes 4 73 13 88 104 crossSect 2 mat 2
+ltrspace 110 nodes 4 74 73 152 89 crossSect 2 mat 2
+ltrspace 111 nodes 4 75 74 153 3 crossSect 2 mat 2
+ltrspace 112 nodes 4 76 75 154 92 crossSect 2 mat 2
+ltrspace 113 nodes 4 14 76 77 18 crossSect 2 mat 2
+ltrspace 114 nodes 4 93 154 78 27 crossSect 2 mat 2
+ltrspace 115 nodes 4 79 78 155 28 crossSect 2 mat 2
+ltrspace 116 nodes 4 80 79 156 96 crossSect 2 mat 2
+ltrspace 117 nodes 4 15 80 81 97 crossSect 2 mat 2
+ltrspace 118 nodes 4 82 81 156 97 crossSect 2 mat 2
+ltrspace 119 nodes 4 98 157 83 4 crossSect 2 mat 2
+ltrspace 120 nodes 4 100 158 83 84 crossSect 2 mat 2
+ltrspace 121 nodes 4 16 84 85 100 crossSect 2 mat 2
+ltrspace 122 nodes 4 86 85 158 102 crossSect 2 mat 2
+ltrspace 123 nodes 4 102 159 87 31 crossSect 2 mat 2
+ltrspace 124 nodes 4 88 87 152 104 crossSect 2 mat 2
+ltrspace 125 nodes 4 73 88 152 104 crossSect 2 mat 2
+ltrspace 126 nodes 4 3 74 153 152 crossSect 2 mat 2
+ltrspace 127 nodes 4 27 153 75 154 crossSect 2 mat 2
+ltrspace 128 nodes 4 76 154 77 92 crossSect 2 mat 2
+ltrspace 129 nodes 4 27 78 155 154 crossSect 2 mat 2
+ltrspace 130 nodes 4 79 155 156 29 crossSect 2 mat 2
+ltrspace 131 nodes 4 80 156 81 97 crossSect 2 mat 2
+ltrspace 132 nodes 4 98 157 156 82 crossSect 2 mat 2
+ltrspace 133 nodes 4 32 83 157 4 crossSect 2 mat 2
+ltrspace 134 nodes 4 84 158 85 100 crossSect 2 mat 2
+ltrspace 135 nodes 4 31 87 152 159 crossSect 2 mat 2
+ltrspace 136 nodes 4 3 152 160 30 crossSect 2 mat 2
+ltrspace 137 nodes 4 27 160 155 142 crossSect 2 mat 2
+ltrspace 138 nodes 4 156 155 157 29 crossSect 2 mat 2
+ltrspace 139 nodes 4 159 158 160 32 crossSect 2 mat 2
+ltrspace 140 nodes 4 31 152 160 159 crossSect 2 mat 2
+ltrspace 141 nodes 4 154 153 160 27 crossSect 2 mat 2
+ltrspace 142 nodes 4 157 155 160 142 crossSect 2 mat 2
+ltrspace 143 nodes 4 32 160 157 158 crossSect 2 mat 2
+ltrspace 144 nodes 4 17 89 104 73 crossSect 2 mat 2
+ltrspace 145 nodes 4 89 90 30 152 crossSect 2 mat 2
+ltrspace 146 nodes 4 90 91 3 74 crossSect 2 mat 2
+ltrspace 147 nodes 4 75 27 92 91 crossSect 2 mat 2
+ltrspace 148 nodes 4 92 18 93 77 crossSect 2 mat 2
+ltrspace 149 nodes 4 93 94 27 78 crossSect 2 mat 2
+ltrspace 150 nodes 4 94 95 28 79 crossSect 2 mat 2
+ltrspace 151 nodes 4 79 29 96 95 crossSect 2 mat 2
+ltrspace 152 nodes 4 96 19 97 80 crossSect 2 mat 2
+ltrspace 153 nodes 4 97 98 29 156 crossSect 2 mat 2
+ltrspace 154 nodes 4 98 99 4 83 crossSect 2 mat 2
+ltrspace 155 nodes 4 99 100 32 83 crossSect 2 mat 2
+ltrspace 156 nodes 4 100 20 101 16 crossSect 2 mat 2
+ltrspace 157 nodes 4 101 102 32 158 crossSect 2 mat 2
+ltrspace 158 nodes 4 102 103 31 87 crossSect 2 mat 2
+ltrspace 159 nodes 4 103 104 30 152 crossSect 2 mat 2
+ltrspace 160 nodes 4 159 32 31 102 crossSect 2 mat 2
+ltrspace 161 nodes 4 32 4 99 83 crossSect 2 mat 2
+ltrspace 162 nodes 4 4 29 98 157 crossSect 2 mat 2
+ltrspace 163 nodes 4 79 28 29 95 crossSect 2 mat 2
+ltrspace 164 nodes 4 28 27 94 78 crossSect 2 mat 2
+ltrspace 165 nodes 4 104 89 30 152 crossSect 2 mat 2
+ltrspace 166 nodes 4 27 92 93 154 crossSect 2 mat 2
+ltrspace 167 nodes 4 29 96 97 156 crossSect 2 mat 2
+ltrspace 168 nodes 4 32 100 101 158 crossSect 2 mat 2
+ltrspace 169 nodes 4 13 73 17 104 crossSect 2 mat 2
+ltrspace 170 nodes 4 74 75 91 3 crossSect 2 mat 2
+ltrspace 171 nodes 4 18 92 76 77 crossSect 2 mat 2
+ltrspace 172 nodes 4 27 75 92 154 crossSect 2 mat 2
+ltrspace 173 nodes 4 90 89 74 152 crossSect 2 mat 2
+ltrspace 174 nodes 4 97 19 15 80 crossSect 2 mat 2
+ltrspace 175 nodes 4 98 97 82 156 crossSect 2 mat 2
+ltrspace 176 nodes 4 158 100 83 32 crossSect 2 mat 2
+ltrspace 177 nodes 4 157 98 83 82 crossSect 2 mat 2
+ltrspace 178 nodes 4 102 101 85 158 crossSect 2 mat 2
+ltrspace 179 nodes 4 104 103 87 152 crossSect 2 mat 2
+ltrspace 180 nodes 4 159 102 87 86 crossSect 2 mat 2
+ltrspace 181 nodes 4 16 85 101 100 crossSect 2 mat 2
+ltrspace 182 nodes 4 154 93 78 77 crossSect 2 mat 2
+ltrspace 183 nodes 4 78 79 94 28 crossSect 2 mat 2
+ltrspace 184 nodes 4 29 79 96 156 crossSect 2 mat 2
+ltrspace 185 nodes 4 30 3 142 160 crossSect 2 mat 2
+ltrspace 186 nodes 4 31 30 142 160 crossSect 2 mat 2
+ltrspace 187 nodes 4 160 32 31 159 crossSect 2 mat 2
+ltrspace 188 nodes 4 4 32 142 157 crossSect 2 mat 2
+ltrspace 189 nodes 4 29 4 142 157 crossSect 2 mat 2
+ltrspace 190 nodes 4 28 29 142 155 crossSect 2 mat 2
+ltrspace 191 nodes 4 27 28 142 155 crossSect 2 mat 2
+ltrspace 192 nodes 4 160 27 3 142 crossSect 2 mat 2
+ltrspace 193 nodes 4 152 89 73 104 crossSect 2 mat 2
+ltrspace 194 nodes 4 74 3 90 152 crossSect 2 mat 2
+ltrspace 195 nodes 4 80 96 156 97 crossSect 2 mat 2
+ltrspace 196 nodes 4 159 102 86 158 crossSect 2 mat 2
+ltrspace 197 nodes 4 87 31 152 103 crossSect 2 mat 2
+ltrspace 198 nodes 4 3 152 30 90 crossSect 2 mat 2
+ltrspace 199 nodes 4 153 27 75 3 crossSect 2 mat 2
+ltrspace 200 nodes 4 27 91 75 3 crossSect 2 mat 2
+ltrspace 201 nodes 4 77 92 154 93 crossSect 2 mat 2
+ltrspace 202 nodes 4 78 27 155 28 crossSect 2 mat 2
+ltrspace 203 nodes 4 28 79 29 155 crossSect 2 mat 2
+ltrspace 204 nodes 4 157 98 156 29 crossSect 2 mat 2
+ltrspace 205 nodes 4 83 32 157 158 crossSect 2 mat 2
+ltrspace 206 nodes 4 85 100 158 101 crossSect 2 mat 2
+ltrspace 207 nodes 4 32 159 158 102 crossSect 2 mat 2
+ltrspace 208 nodes 4 31 30 152 103 crossSect 2 mat 2
+ltrspace 209 nodes 4 152 3 160 153 crossSect 2 mat 2
+ltrspace 210 nodes 4 160 27 155 154 crossSect 2 mat 2
+ltrspace 211 nodes 4 157 29 155 142 crossSect 2 mat 2
+ltrspace 212 nodes 4 152 31 160 30 crossSect 2 mat 2
+ltrspace 213 nodes 4 160 32 157 142 crossSect 2 mat 2
+ltrspace 214 nodes 4 27 160 3 153 crossSect 2 mat 2
+ltrspace 215 nodes 4 32 160 31 142 crossSect 2 mat 2
+ltrspace 216 nodes 4 37 2 105 161 crossSect 1 mat 1
+ltrspace 217 nodes 4 38 37 106 162 crossSect 1 mat 1
+ltrspace 218 nodes 4 39 38 107 163 crossSect 1 mat 1
+ltrspace 219 nodes 4 40 39 108 164 crossSect 1 mat 1
+ltrspace 220 nodes 4 4 40 109 165 crossSect 1 mat 1
+ltrspace 221 nodes 4 29 4 109 165 crossSect 1 mat 1
+ltrspace 222 nodes 4 166 110 29 28 crossSect 1 mat 1
+ltrspace 223 nodes 4 27 28 111 166 crossSect 1 mat 1
+ltrspace 224 nodes 4 3 27 112 166 crossSect 1 mat 1
+ltrspace 225 nodes 4 167 112 3 36 crossSect 1 mat 1
+ltrspace 226 nodes 4 35 36 113 167 crossSect 1 mat 1
+ltrspace 227 nodes 4 34 35 114 168 crossSect 1 mat 1
+ltrspace 228 nodes 4 33 34 115 169 crossSect 1 mat 1
+ltrspace 229 nodes 4 1 33 116 170 crossSect 1 mat 1
+ltrspace 230 nodes 4 21 1 116 170 crossSect 1 mat 1
+ltrspace 231 nodes 4 171 117 21 22 crossSect 1 mat 1
+ltrspace 232 nodes 4 23 22 118 171 crossSect 1 mat 1
+ltrspace 233 nodes 4 2 23 105 161 crossSect 1 mat 1
+ltrspace 234 nodes 4 37 105 106 162 crossSect 1 mat 1
+ltrspace 235 nodes 4 38 106 107 172 crossSect 1 mat 1
+ltrspace 236 nodes 4 39 107 108 164 crossSect 1 mat 1
+ltrspace 237 nodes 4 40 108 109 164 crossSect 1 mat 1
+ltrspace 238 nodes 4 29 109 110 165 crossSect 1 mat 1
+ltrspace 239 nodes 4 28 110 111 166 crossSect 1 mat 1
+ltrspace 240 nodes 4 27 111 112 166 crossSect 1 mat 1
+ltrspace 241 nodes 4 36 112 113 167 crossSect 1 mat 1
+ltrspace 242 nodes 4 35 113 114 173 crossSect 1 mat 1
+ltrspace 243 nodes 4 34 114 115 169 crossSect 1 mat 1
+ltrspace 244 nodes 4 33 115 116 169 crossSect 1 mat 1
+ltrspace 245 nodes 4 21 116 117 170 crossSect 1 mat 1
+ltrspace 246 nodes 4 22 117 118 171 crossSect 1 mat 1
+ltrspace 247 nodes 4 161 23 118 171 crossSect 1 mat 1
+ltrspace 248 nodes 4 106 105 118 162 crossSect 1 mat 1
+ltrspace 249 nodes 4 107 106 119 172 crossSect 1 mat 1
+ltrspace 250 nodes 4 108 107 120 164 crossSect 1 mat 1
+ltrspace 251 nodes 4 109 108 110 164 crossSect 1 mat 1
+ltrspace 252 nodes 4 111 110 120 164 crossSect 1 mat 1
+ltrspace 253 nodes 4 112 111 113 167 crossSect 1 mat 1
+ltrspace 254 nodes 4 114 113 121 173 crossSect 1 mat 1
+ltrspace 255 nodes 4 115 114 122 169 crossSect 1 mat 1
+ltrspace 256 nodes 4 116 115 117 169 crossSect 1 mat 1
+ltrspace 257 nodes 4 118 117 122 169 crossSect 1 mat 1
+ltrspace 258 nodes 4 106 118 119 172 crossSect 1 mat 1
+ltrspace 259 nodes 4 107 119 120 172 crossSect 1 mat 1
+ltrspace 260 nodes 4 108 120 110 164 crossSect 1 mat 1
+ltrspace 261 nodes 4 111 120 121 173 crossSect 1 mat 1
+ltrspace 262 nodes 4 113 111 121 173 crossSect 1 mat 1
+ltrspace 263 nodes 4 173 114 122 121 crossSect 1 mat 1
+ltrspace 264 nodes 4 115 122 117 169 crossSect 1 mat 1
+ltrspace 265 nodes 4 118 122 119 172 crossSect 1 mat 1
+ltrspace 266 nodes 4 120 119 122 172 crossSect 1 mat 1
+ltrspace 267 nodes 4 121 120 122 173 crossSect 1 mat 1
+ltrspace 268 nodes 4 2 37 123 161 crossSect 1 mat 1
+ltrspace 269 nodes 4 37 38 124 162 crossSect 1 mat 1
+ltrspace 270 nodes 4 38 39 125 163 crossSect 1 mat 1
+ltrspace 271 nodes 4 39 40 126 164 crossSect 1 mat 1
+ltrspace 272 nodes 4 40 4 127 165 crossSect 1 mat 1
+ltrspace 273 nodes 4 4 32 127 165 crossSect 1 mat 1
+ltrspace 274 nodes 4 174 128 32 165 crossSect 1 mat 1
+ltrspace 275 nodes 4 31 30 129 174 crossSect 1 mat 1
+ltrspace 276 nodes 4 30 3 130 174 crossSect 1 mat 1
+ltrspace 277 nodes 4 167 130 3 174 crossSect 1 mat 1
+ltrspace 278 nodes 4 36 35 131 167 crossSect 1 mat 1
+ltrspace 279 nodes 4 35 34 132 168 crossSect 1 mat 1
+ltrspace 280 nodes 4 34 33 133 169 crossSect 1 mat 1
+ltrspace 281 nodes 4 33 1 134 170 crossSect 1 mat 1
+ltrspace 282 nodes 4 1 24 134 170 crossSect 1 mat 1
+ltrspace 283 nodes 4 175 135 24 170 crossSect 1 mat 1
+ltrspace 284 nodes 4 25 26 136 175 crossSect 1 mat 1
+ltrspace 285 nodes 4 26 2 123 161 crossSect 1 mat 1
+ltrspace 286 nodes 4 123 37 124 162 crossSect 1 mat 1
+ltrspace 287 nodes 4 124 38 125 163 crossSect 1 mat 1
+ltrspace 288 nodes 4 125 39 126 164 crossSect 1 mat 1
+ltrspace 289 nodes 4 126 40 127 164 crossSect 1 mat 1
+ltrspace 290 nodes 4 127 32 128 165 crossSect 1 mat 1
+ltrspace 291 nodes 4 128 31 129 174 crossSect 1 mat 1
+ltrspace 292 nodes 4 129 30 130 174 crossSect 1 mat 1
+ltrspace 293 nodes 4 130 36 131 167 crossSect 1 mat 1
+ltrspace 294 nodes 4 131 35 132 168 crossSect 1 mat 1
+ltrspace 295 nodes 4 132 34 133 169 crossSect 1 mat 1
+ltrspace 296 nodes 4 133 33 134 169 crossSect 1 mat 1
+ltrspace 297 nodes 4 134 24 135 170 crossSect 1 mat 1
+ltrspace 298 nodes 4 135 25 136 175 crossSect 1 mat 1
+ltrspace 299 nodes 4 161 26 136 123 crossSect 1 mat 1
+ltrspace 300 nodes 4 123 124 136 162 crossSect 1 mat 1
+ltrspace 301 nodes 4 124 125 137 163 crossSect 1 mat 1
+ltrspace 302 nodes 4 125 126 138 164 crossSect 1 mat 1
+ltrspace 303 nodes 4 126 127 128 164 crossSect 1 mat 1
+ltrspace 304 nodes 4 128 129 138 164 crossSect 1 mat 1
+ltrspace 305 nodes 4 129 130 131 167 crossSect 1 mat 1
+ltrspace 306 nodes 4 131 132 139 168 crossSect 1 mat 1
+ltrspace 307 nodes 4 132 133 140 169 crossSect 1 mat 1
+ltrspace 308 nodes 4 133 134 135 169 crossSect 1 mat 1
+ltrspace 309 nodes 4 135 136 140 169 crossSect 1 mat 1
+ltrspace 310 nodes 4 136 124 137 162 crossSect 1 mat 1
+ltrspace 311 nodes 4 137 125 138 163 crossSect 1 mat 1
+ltrspace 312 nodes 4 138 126 128 164 crossSect 1 mat 1
+ltrspace 313 nodes 4 138 129 139 167 crossSect 1 mat 1
+ltrspace 314 nodes 4 129 131 139 167 crossSect 1 mat 1
+ltrspace 315 nodes 4 139 132 140 168 crossSect 1 mat 1
+ltrspace 316 nodes 4 140 133 135 169 crossSect 1 mat 1
+ltrspace 317 nodes 4 140 136 137 162 crossSect 1 mat 1
+ltrspace 318 nodes 4 137 138 140 163 crossSect 1 mat 1
+ltrspace 319 nodes 4 138 139 140 168 crossSect 1 mat 1
+ltrspace 320 nodes 4 24 1 141 170 crossSect 1 mat 1
+ltrspace 321 nodes 4 26 25 141 175 crossSect 1 mat 1
+ltrspace 322 nodes 4 22 23 141 171 crossSect 1 mat 1
+ltrspace 323 nodes 4 1 21 141 170 crossSect 1 mat 1
+ltrspace 324 nodes 4 3 30 142 174 crossSect 1 mat 1
+ltrspace 325 nodes 4 30 31 142 174 crossSect 1 mat 1
+ltrspace 326 nodes 4 32 4 142 165 crossSect 1 mat 1
+ltrspace 327 nodes 4 4 29 142 165 crossSect 1 mat 1
+ltrspace 328 nodes 4 28 27 142 166 crossSect 1 mat 1
+ltrspace 329 nodes 4 27 3 142 166 crossSect 1 mat 1
+ltrspace 330 nodes 4 37 161 105 162 crossSect 1 mat 1
+ltrspace 331 nodes 4 38 162 106 172 crossSect 1 mat 1
+ltrspace 332 nodes 4 107 163 38 172 crossSect 1 mat 1
+ltrspace 333 nodes 4 39 163 107 164 crossSect 1 mat 1
+ltrspace 334 nodes 4 109 165 40 164 crossSect 1 mat 1
+ltrspace 335 nodes 4 110 166 29 165 crossSect 1 mat 1
+ltrspace 336 nodes 4 166 142 29 165 crossSect 1 mat 1
+ltrspace 337 nodes 4 3 167 166 112 crossSect 1 mat 1
+ltrspace 338 nodes 4 167 3 166 174 crossSect 1 mat 1
+ltrspace 339 nodes 4 35 167 113 173 crossSect 1 mat 1
+ltrspace 340 nodes 4 114 168 35 173 crossSect 1 mat 1
+ltrspace 341 nodes 4 34 168 114 169 crossSect 1 mat 1
+ltrspace 342 nodes 4 116 170 33 169 crossSect 1 mat 1
+ltrspace 343 nodes 4 117 171 21 170 crossSect 1 mat 1
+ltrspace 344 nodes 4 171 141 21 170 crossSect 1 mat 1
+ltrspace 345 nodes 4 141 23 161 171 crossSect 1 mat 1
+ltrspace 346 nodes 4 110 165 109 164 crossSect 1 mat 1
+ltrspace 347 nodes 4 111 166 110 164 crossSect 1 mat 1
+ltrspace 348 nodes 4 112 166 111 167 crossSect 1 mat 1
+ltrspace 349 nodes 4 117 170 116 169 crossSect 1 mat 1
+ltrspace 350 nodes 4 118 171 117 169 crossSect 1 mat 1
+ltrspace 351 nodes 4 23 161 118 105 crossSect 1 mat 1
+ltrspace 352 nodes 4 118 162 105 161 crossSect 1 mat 1
+ltrspace 353 nodes 4 106 162 118 172 crossSect 1 mat 1
+ltrspace 354 nodes 4 120 164 107 163 crossSect 1 mat 1
+ltrspace 355 nodes 4 111 164 120 173 crossSect 1 mat 1
+ltrspace 356 nodes 4 113 167 111 173 crossSect 1 mat 1
+ltrspace 357 nodes 4 122 169 114 168 crossSect 1 mat 1
+ltrspace 358 nodes 4 118 169 122 172 crossSect 1 mat 1
+ltrspace 359 nodes 4 107 172 120 163 crossSect 1 mat 1
+ltrspace 360 nodes 4 114 173 122 168 crossSect 1 mat 1
+ltrspace 361 nodes 4 120 172 122 173 crossSect 1 mat 1
+ltrspace 362 nodes 4 123 161 37 162 crossSect 1 mat 1
+ltrspace 363 nodes 4 124 162 38 163 crossSect 1 mat 1
+ltrspace 364 nodes 4 125 163 39 164 crossSect 1 mat 1
+ltrspace 365 nodes 4 40 165 127 164 crossSect 1 mat 1
+ltrspace 366 nodes 4 128 174 32 31 crossSect 1 mat 1
+ltrspace 367 nodes 4 174 32 142 165 crossSect 1 mat 1
+ltrspace 368 nodes 4 130 167 3 36 crossSect 1 mat 1
+ltrspace 369 nodes 4 131 167 35 168 crossSect 1 mat 1
+ltrspace 370 nodes 4 132 168 34 169 crossSect 1 mat 1
+ltrspace 371 nodes 4 33 170 134 169 crossSect 1 mat 1
+ltrspace 372 nodes 4 135 175 24 25 crossSect 1 mat 1
+ltrspace 373 nodes 4 175 24 141 170 crossSect 1 mat 1
+ltrspace 374 nodes 4 141 26 161 2 crossSect 1 mat 1
+ltrspace 375 nodes 4 127 165 128 164 crossSect 1 mat 1
+ltrspace 376 nodes 4 128 174 129 164 crossSect 1 mat 1
+ltrspace 377 nodes 4 129 174 130 167 crossSect 1 mat 1
+ltrspace 378 nodes 4 134 170 135 169 crossSect 1 mat 1
+ltrspace 379 nodes 4 135 175 136 169 crossSect 1 mat 1
+ltrspace 380 nodes 4 26 161 136 175 crossSect 1 mat 1
+ltrspace 381 nodes 4 123 162 136 161 crossSect 1 mat 1
+ltrspace 382 nodes 4 124 163 137 162 crossSect 1 mat 1
+ltrspace 383 nodes 4 125 164 138 163 crossSect 1 mat 1
+ltrspace 384 nodes 4 138 164 129 167 crossSect 1 mat 1
+ltrspace 385 nodes 4 131 168 139 167 crossSect 1 mat 1
+ltrspace 386 nodes 4 132 169 140 168 crossSect 1 mat 1
+ltrspace 387 nodes 4 140 169 136 162 crossSect 1 mat 1
+ltrspace 388 nodes 4 138 167 139 168 crossSect 1 mat 1
+ltrspace 389 nodes 4 140 162 137 163 crossSect 1 mat 1
+ltrspace 390 nodes 4 140 163 138 168 crossSect 1 mat 1
+ltrspace 391 nodes 4 175 141 24 25 crossSect 1 mat 1
+ltrspace 392 nodes 4 26 141 161 175 crossSect 1 mat 1
+ltrspace 393 nodes 4 23 141 161 2 crossSect 1 mat 1
+ltrspace 394 nodes 4 171 21 141 22 crossSect 1 mat 1
+ltrspace 395 nodes 4 3 174 142 166 crossSect 1 mat 1
+ltrspace 396 nodes 4 174 142 32 31 crossSect 1 mat 1
+ltrspace 397 nodes 4 166 29 142 28 crossSect 1 mat 1
+ltrspace 398 nodes 4 162 172 38 163 crossSect 1 mat 1
+ltrspace 399 nodes 4 110 166 165 164 crossSect 1 mat 1
+ltrspace 400 nodes 4 167 173 35 168 crossSect 1 mat 1
+ltrspace 401 nodes 4 117 171 170 169 crossSect 1 mat 1
+ltrspace 402 nodes 4 166 164 111 167 crossSect 1 mat 1
+ltrspace 403 nodes 4 161 118 169 171 crossSect 1 mat 1
+ltrspace 404 nodes 4 118 172 162 169 crossSect 1 mat 1
+ltrspace 405 nodes 4 164 163 120 173 crossSect 1 mat 1
+ltrspace 406 nodes 4 164 173 111 167 crossSect 1 mat 1
+ltrspace 407 nodes 4 169 168 122 172 crossSect 1 mat 1
+ltrspace 408 nodes 4 120 163 172 173 crossSect 1 mat 1
+ltrspace 409 nodes 4 168 173 122 172 crossSect 1 mat 1
+ltrspace 410 nodes 4 165 174 128 164 crossSect 1 mat 1
+ltrspace 411 nodes 4 170 175 135 169 crossSect 1 mat 1
+ltrspace 412 nodes 4 129 164 174 167 crossSect 1 mat 1
+ltrspace 413 nodes 4 161 136 169 162 crossSect 1 mat 1
+ltrspace 414 nodes 4 167 163 164 173 crossSect 1 mat 1
+ltrspace 415 nodes 4 167 164 163 138 crossSect 1 mat 1
+ltrspace 416 nodes 4 162 168 169 172 crossSect 1 mat 1
+ltrspace 417 nodes 4 162 169 168 140 crossSect 1 mat 1
+ltrspace 418 nodes 4 168 167 173 163 crossSect 1 mat 1
+ltrspace 419 nodes 4 163 162 172 168 crossSect 1 mat 1
+ltrspace 420 nodes 4 167 168 138 163 crossSect 1 mat 1
+ltrspace 421 nodes 4 162 163 140 168 crossSect 1 mat 1
+ltrspace 422 nodes 4 141 175 170 161 crossSect 1 mat 1
+ltrspace 423 nodes 4 171 161 141 170 crossSect 1 mat 1
+ltrspace 424 nodes 4 142 166 174 165 crossSect 1 mat 1
+ltrspace 425 nodes 4 164 166 174 167 crossSect 1 mat 1
+ltrspace 426 nodes 4 170 169 171 161 crossSect 1 mat 1
+ltrspace 427 nodes 4 118 161 169 162 crossSect 1 mat 1
+ltrspace 428 nodes 4 172 173 163 168 crossSect 1 mat 1
+ltrspace 429 nodes 4 166 164 174 165 crossSect 1 mat 1
+ltrspace 430 nodes 4 175 169 170 161 crossSect 1 mat 1
+ltrspace 431 nodes 4 136 161 169 175 crossSect 1 mat 1
+SimpleCS 1
+SimpleCS 2
+cdpm2f 1 d 0. talpha 0. stype 2 E 30.e9 n 0.155 ft 2.2e6 fc 39.28e6 wf 2.e-7 ef 48.e9 lf 12.e-3 vf0 0.02 df 38.e-6 beta 0.02 f 0.8 tau0 0.6e6 sm 0.04 hp 0.05 alpha 0.65 efc 1.0e-5
+isole 2 d 0 n 0.2 e 60.483e9 talpha 0.
+BoundaryCondition  1 loadTimeFunction 1 prescribedvalue 0.0 
+BoundaryCondition  2 loadTimeFunction 2 prescribedvalue -0.02
+ConstantFunction 1 f(t) 1.0  
+PiecewiseLinFunction 2 t 2 0. 500. f(t) 2 0.0 1.0
+
+#%BEGIN_CHECK%
+#DOFMAN  number 1 dof 3 type d
+#DOFMAN  number 3 dof 3 type d
+#REACTION number 9 dof 3
+#%END_CHECK%

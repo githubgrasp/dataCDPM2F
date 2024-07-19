@@ -1,0 +1,148 @@
+# t3d -X -d 0.04 -p 8 -i mesh.in -o mesh.out
+
+#Plain concrete cylinder with height = 0.30 m and diameter = 0.15 m
+
+vertex 1 xyz 0.05 0. 0.
+vertex 2 xyz 0.05 0.1 0.
+
+vertex 3 xyz 0.05 0.0 0.20
+vertex 4 xyz 0.05 0.1 0.20
+
+curve 101 order 4 vertex 1 2 
+polygon 1 xyz 0.15 0.0 0.0 weight 0.3333333
+polygon 2 xyz 0.15 0.1 0.0 weight 0.333333
+curve 102 order 4 vertex 1 2 
+polygon 1 xyz -0.05 0.0 0.0 weight 0.3333333
+polygon 2 xyz -0.05 0.1 0.0 weight 0.333333
+
+curve 103 order 4 vertex 3 4 
+polygon 1 xyz 0.15 0. 0.20 weight 0.3333333
+polygon 2 xyz 0.15 0.1 0.20 weight 0.333333
+curve 104 order 4 vertex 3 4 
+polygon 1 xyz -0.05 0. 0.2 weight 0.3333333
+polygon 2 xyz -0.05 0.1 0.2 weight 0.333333
+
+curve 5 order 2 vertex 1 3
+curve 6 order 2 vertex 2 4
+
+patch 1 normal 0 0 -1 boundary curve -101 102   
+patch 2 normal 0 0 -1 boundary curve -103 104 
+surface 3 curve 101 5 103 6 size def
+surface 4 curve 102 5 104 6 size def
+
+
+# Bottom Steel Plate with dimensions 0.2 x 0.2 x 0.05
+
+# Top Vertices
+
+vertex 201 xyz -0.025 -0.025 0.
+vertex 202 xyz 0.125 -0.025 0.
+vertex 203 xyz 0.125 0.125 0.
+vertex 204 xyz -0.025 0.125 0.
+
+# Bottom Vertices
+
+vertex 205 xyz -0.025 -0.025 -0.03
+vertex 206 xyz 0.125 -0.025 -0.03
+vertex 207 xyz 0.125 0.125 -0.03
+vertex 208 xyz -0.025 0.125 -0.03
+
+# Curves
+
+# Top
+curve 201 order 2 vertex 201 202
+curve 202 order 2 vertex 202 203
+curve 203 order 2 vertex 203 204
+curve 204 order 2 vertex 204 201
+
+# Bottom
+curve 205 order 2 vertex 205 206
+curve 206 order 2 vertex 206 207
+curve 207 order 2 vertex 207 208
+curve 208 order 2 vertex 208 205
+
+# Vertical 
+curve 209 order 2 vertex 201 205
+curve 210 order 2 vertex 202 206
+curve 211 order 2 vertex 203 207
+curve 212 order 2 vertex 204 208
+
+# Facets
+
+#Top
+patch 21 normal 0 0 1 boundary curve 201 202 203 204 \
+subpatch 1
+#Bottom
+patch 22 normal 0 0 1 boundary curve 205 206 207 208 
+#Front
+patch 23 normal 0 1 0 boundary curve 201 210 -205 -209
+#Back
+patch 24 normal 0 1 0 boundary curve -203 211 207 -212
+#left
+patch 25 normal -1 0 0 boundary curve -204 212 208 -209
+#right
+patch 26 normal -1 0 0 boundary curve 202 211 -206 -210
+
+
+
+# Top Steel Plate with dimensions 0.2 x 0.2 x 0.05
+
+# Top Vertices
+
+vertex 221 xyz -0.025 -0.025 0.23
+vertex 222 xyz 0.125 -0.025 0.23
+vertex 223 xyz 0.125 0.125 0.23
+vertex 224 xyz -0.025 0.125 0.23
+
+# Bottom Vertices
+
+vertex 225 xyz -0.025 -0.025 0.20
+vertex 226 xyz 0.125 -0.025 0.20
+vertex 227 xyz 0.125 0.125 0.20
+vertex 228 xyz -0.025 0.125 0.20
+
+# Curves
+
+# Top
+curve 221 order 2 vertex 221 222
+curve 222 order 2 vertex 222 223
+curve 223 order 2 vertex 223 224
+curve 224 order 2 vertex 224 221
+
+# Bottom
+curve 225 order 2 vertex 225 226
+curve 226 order 2 vertex 226 227
+curve 227 order 2 vertex 227 228
+curve 228 order 2 vertex 228 225
+
+# Vertical 
+curve 229 order 2 vertex 221 225
+curve 230 order 2 vertex 222 226
+curve 231 order 2 vertex 223 227
+curve 232 order 2 vertex 224 228
+
+
+# Facets
+#Top
+patch 31 normal 0 0 1 boundary curve 221 222 223 224 
+#Bottom
+patch 32 normal 0 0 1 boundary curve 225 226 227 228 \
+subpatch 2
+#Front
+patch 33 normal 0 1 0 boundary curve 221 230 -225 -229
+#Back
+patch 34 normal 0 1 0 boundary curve -223 231 227 -232
+#left
+patch 35 normal -1 0 0 boundary curve -224 232 228 -229
+#right
+patch 36 normal -1 0 0 boundary curve 222 231 -226 -230
+
+region 2 boundary patch 21 -22 -23 24 25 -26 -1 size def
+
+region 3 boundary patch 31 -32 -33 34 35 -36 2 size def
+
+region 1 boundary patch 1 -2 boundary surface 3 -4 size def
+
+
+
+
